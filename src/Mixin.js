@@ -168,7 +168,7 @@ module.exports = {
     return this.state._isRequired;
   },
   showError: function () {
-      return !this.isPristine && this.showRequired() || !this.isValid();
+    return !this.isPristine() && this.showRequired() || !this.isPristine() && !this.isValid();
   },
   isValidValue: function (value) {
     return this.context.formsy.isValidValue.call(null, this, value);

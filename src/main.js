@@ -392,7 +392,7 @@ Formsy.Form = React.createClass({
 
     // If there are no inputs, set state where form is ready to trigger
     // change event. New inputs might be added later
-    if (!this.inputs.length && this.isMounted()) {
+    if (!this.inputs.length) {
       this.setState({
         canChange: true
       });
